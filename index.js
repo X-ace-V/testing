@@ -2,12 +2,14 @@ import express from 'express';
 
 const app = express();
 
+const PORT = 3005;
+
 app.get('/hello', (req, res) => {
     res.json({
         message: "Hello World"
     });
 })
 
-app.listen(3005, () => {
-    console.log('Server started at Port 3000!');
+app.listen(PORT, () => {
+    console.log(`Server started at Port ${PORT}`);
 })
